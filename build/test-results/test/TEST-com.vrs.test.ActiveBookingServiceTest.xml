@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vrs.test.ActiveBookingServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-08-10T08:46:54" hostname="LAPTOP-95BKIJIV" time="0.515">
+  <properties/>
+  <testcase name="testFindByPending()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.255"/>
+  <testcase name="testFindByStatus()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.038"/>
+  <testcase name="testFindByCompleted()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.021"/>
+  <testcase name="testFindByInprogress()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.014"/>
+  <testcase name="testViewAllActiveBooking()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.157"/>
+  <testcase name="testFindByCancelled()" classname="com.vrs.test.ActiveBookingServiceTest" time="0.017"/>
+  <system-out><![CDATA[[INFO ] 2021-08-10 14:16:33.252 [Test worker] SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.vrs.test.ActiveBookingServiceTest], using SpringBootContextLoader
+[INFO ] 2021-08-10 14:16:33.256 [Test worker] AbstractContextLoader - Could not detect default resource locations for test class [com.vrs.test.ActiveBookingServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2021-08-10 14:16:33.257 [Test worker] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.vrs.test.ActiveBookingServiceTest]: ActiveBookingServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2021-08-10 14:16:33.473 [Test worker] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.vrs.VehicleRentingSystemApplication for test class com.vrs.test.ActiveBookingServiceTest
+[INFO ] 2021-08-10 14:16:33.940 [Test worker] SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2021-08-10 14:16:33.950 [Test worker] SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@72cace10, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@a6f876a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4b8e46dc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@583e0cc7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ca0f39e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a027fb7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3383708d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1b730a0e, org.springframework.test.context.event.EventPublishingTestExecutionListener@603436fd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7952028b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51fd0234, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@525d517f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@131f1617, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7a3008a5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@43654975]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.3)
+
+[INFO ] 2021-08-10 14:16:34.690 [Test worker] ActiveBookingServiceTest - Starting ActiveBookingServiceTest using Java 1.8.0_301 on LAPTOP-95BKIJIV with PID 9684 (started by Indhu Acer in C:\Users\Indhu Acer\Desktop\Spring boot\VehicleRentingSystem)
+[INFO ] 2021-08-10 14:16:34.703 [Test worker] ActiveBookingServiceTest - No active profile set, falling back to default profiles: default
+[INFO ] 2021-08-10 14:16:37.713 [Test worker] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-08-10 14:16:37.940 [Test worker] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 192 ms. Found 1 JPA repository interfaces.
+[INFO ] 2021-08-10 14:16:40.037 [Test worker] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-08-10 14:16:40.252 [Test worker] Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+[INFO ] 2021-08-10 14:16:40.426 [Test worker] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-08-10 14:16:40.885 [Test worker] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2021-08-10 14:16:42.242 [Test worker] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2021-08-10 14:16:42.375 [Test worker] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2021-08-10 14:16:46.013 [Test worker] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-08-10 14:16:46.255 [Test worker] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-08-10 14:16:50.409 [Test worker] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-08-10 14:16:54.800 [Test worker] ActiveBookingServiceTest - Started ActiveBookingServiceTest in 20.738 seconds (JVM running for 31.862)
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_ 
+    where
+        activebook0_.status='pending'
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_ 
+    where
+        activebook0_.status=?
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_ 
+    where
+        activebook0_.status='completed'
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_ 
+    where
+        activebook0_.status='inprogress'
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_
+Hibernate: 
+    select
+        activebook0_.active_booking_id as active_b1_0_,
+        activebook0_.status as status2_0_ 
+    from
+        active_booking activebook0_ 
+    where
+        activebook0_.status='cancelled'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
